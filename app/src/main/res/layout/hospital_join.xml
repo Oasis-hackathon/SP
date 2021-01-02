@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/editTextTextPersonName3"
+        android:layout_width="349dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="37dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="이름"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName10"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="28dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName10"
+        android:layout_width="349dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="37dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="주민번호"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName5"
+        tools:layout_editor_absoluteX="30dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName7"
+        android:layout_width="349dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="37dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="ID"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName8"
+        tools:layout_editor_absoluteX="28dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName8"
+        android:layout_width="349dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="37dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="PW"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName9"
+        tools:layout_editor_absoluteX="28dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName9"
+        android:layout_width="349dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="100dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="PW"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="27dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName6"
+        android:layout_width="349dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="37dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="주소"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName7"
+        tools:layout_editor_absoluteX="28dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName5"
+        android:layout_width="349dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="37dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="병원명"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName6"
+        tools:layout_editor_absoluteX="27dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
