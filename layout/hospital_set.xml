@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:text="영업 시간" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName11"
+        android:layout_width="458dp"
+        android:layout_height="56dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="대기시간"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="179dp" />
+
+    <RadioGroup
+        android:id="@+id/rg_wtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </RadioGroup>
+
+    <RadioButton
+        android:id="@+id/rb_smooth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="원활"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="236dp" />
+
+    <RadioButton
+        android:id="@+id/rb_normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="보통"
+        app:layout_constraintTop_toBottomOf="@+id/rb_smooth"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <RadioButton
+        android:id="@+id/rb_congestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="혼잡"
+        app:layout_constraintTop_toBottomOf="@+id/rb_normal"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/btn_update"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="update"
+        tools:layout_editor_absoluteX="78dp"
+        tools:layout_editor_absoluteY="618dp" />
+
+</LinearLayout>
