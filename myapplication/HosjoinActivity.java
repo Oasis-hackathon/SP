@@ -19,8 +19,7 @@ import org.json.JSONObject;
 
 public class HosjoinActivity extends AppCompatActivity {
 
-    private EditText et_id,et_pw,et_name, et_num, et_hos, et_add;
-    private Button btn_register;
+    private EditText et_id,et_pass,et_name, et_num, et_hos, et_add;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,21 +27,20 @@ public class HosjoinActivity extends AppCompatActivity {
         setContentView(R.layout.hospital_join);
 
         et_id=findViewById(R.id.et_id);
-        et_pw=findViewById(R.id.et_pw);
+        et_pass=findViewById(R.id.et_pass);
         et_name=findViewById(R.id.et_name);
         et_num=findViewById(R.id.et_num);
         et_hos=findViewById(R.id.et_hos);
         et_add=findViewById(R.id.et_add);
 
-        btn_register=findViewById(R.id.btn_register);
-        btn_register.setOnClickListener(new View.OnClickListener() {
+        Button btn_register = findViewById(R.id.btn_register);
+        btn_register.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-
                 String userID = et_id.getText().toString();
-                String userPassword=et_pw.getText().toString();
+                String userPassword=et_pass.getText().toString();
                 String userName=et_name.getText().toString();
-                String userNumber=et_num.getText().toString();
+                String userNum=et_num.getText().toString();
                 String userHosName=et_hos.getText().toString();
                 String userAddress=et_add.getText().toString();
 
@@ -65,7 +63,7 @@ public class HosjoinActivity extends AppCompatActivity {
                         }
                     }
                 };
-                JoinRequest joinRequest = new JoinRequest(userID, userPassword, userName, userNumber, userHosName, userAddress, responseListener);
+                JoinRequest joinRequest = new JoinRequest(userID, userPassword, userName, userNum, userHosName, userAddress, responseListener);
                 RequestQueue queue= Volley.newRequestQueue(HosjoinActivity.this);
                 queue.add(joinRequest);
             }
