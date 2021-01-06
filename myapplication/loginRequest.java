@@ -9,12 +9,9 @@ import java.util.Map;
 
 public class loginRequest extends StringRequest {
     final static private String URL = "http://sp2018.dothome.co.kr/Login.php";
-
     private Map<String,String> map;
 
-    public loginRequest(String userID,
-                        String userPassword,
-                        Response.Listener<String> listener){
+    public loginRequest(String userID, String userPassword, Response.Listener<String> listener){
         super(Method.POST,URL, listener,null);
 
         map=new HashMap<>();
