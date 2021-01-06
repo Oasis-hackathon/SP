@@ -1,6 +1,5 @@
 package com.example.myapplication;
 
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -18,7 +17,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class HosloginActivity extends AppCompatActivity {
-    private EditText et_id, et_pw;
+    private EditText et_id, et_pass;
     private Button btn_log;
 
     @Override
@@ -27,18 +26,15 @@ public class HosloginActivity extends AppCompatActivity {
         setContentView(R.layout.hospital_login);
 
         et_id = findViewById(R.id.et_id);
-        et_pw = findViewById(R.id.et_pw);
-
+        et_pass = findViewById(R.id.et_pass);
         btn_log=findViewById(R.id.btn_log);
+
         btn_log.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View view){
-                Intent intent = new Intent(getApplicationContext(),HossetActivity.class);
-                startActivity(intent); //액티비티 이동
-
                 String userID = et_id.getText().toString();
-                String userPassword = et_pw.getText().toString();
+                String userPassword = et_pass.getText().toString();
 
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
@@ -47,14 +43,15 @@ public class HosloginActivity extends AppCompatActivity {
                             JSONObject jsonObject = new JSONObject(response);
                             boolean success = jsonObject.getBoolean("success");
                             if (success) {
-                                String userID = jsonObject.getString("success");
-                                String userPassword = jsonObject.getString("success");
+                                String userID = jsonObject.getString("userID");
+                                String userPassword = jsonObject.getString("userPassword");
 
                                 Toast.makeText(getApplicationContext(), "로그인에 성공하였습니다.", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(HosloginActivity.this, HosMainActivity.class);
+                                Intent intent = new Intent(HosloginActivity.this, HossetActivity.class);
                                 intent.putExtra("userID", userID);
-                                intent.putExtra("userPass", userPassword);
+                                intent.putExtra("userPassword", userPassword);
                                 startActivity(intent);
+
                             } else {
                                 Toast.makeText(getApplicationContext(), "회원등록에 실패하였습니다.", Toast.LENGTH_SHORT).show();
                                 return;
